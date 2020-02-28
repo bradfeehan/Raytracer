@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8053D6A1240926BE00CD65CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6A0240926BE00CD65CF /* AppDelegate.swift */; };
+		8053D6A3240926BE00CD65CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6A2240926BE00CD65CF /* GameViewController.swift */; };
+		8053D6A6240926BE00CD65CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8053D6A4240926BE00CD65CF /* Main.storyboard */; };
+		8053D6A9240926BE00CD65CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8053D6A7240926BE00CD65CF /* LaunchScreen.storyboard */; };
+		8053D6B2240926BE00CD65CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6B1240926BE00CD65CF /* AppDelegate.swift */; };
+		8053D6B4240926BE00CD65CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6B3240926BE00CD65CF /* GameViewController.swift */; };
+		8053D6B7240926BE00CD65CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8053D6B5240926BE00CD65CF /* Main.storyboard */; };
+		8053D6BA240926BE00CD65CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8053D6B8240926BE00CD65CF /* LaunchScreen.storyboard */; };
+		8053D6C3240926BE00CD65CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6C2240926BE00CD65CF /* AppDelegate.swift */; };
+		8053D6C5240926BE00CD65CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6C4240926BE00CD65CF /* GameViewController.swift */; };
+		8053D6C8240926BE00CD65CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8053D6C6240926BE00CD65CF /* Main.storyboard */; };
+		8053D6CA240926BE00CD65CF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8053D695240926BC00CD65CF /* Actions.sks */; };
+		8053D6CB240926BE00CD65CF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8053D695240926BC00CD65CF /* Actions.sks */; };
+		8053D6CC240926BE00CD65CF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8053D695240926BC00CD65CF /* Actions.sks */; };
+		8053D6CD240926BE00CD65CF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8053D696240926BC00CD65CF /* GameScene.sks */; };
+		8053D6CE240926BE00CD65CF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8053D696240926BC00CD65CF /* GameScene.sks */; };
+		8053D6CF240926BE00CD65CF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8053D696240926BC00CD65CF /* GameScene.sks */; };
+		8053D6D0240926BE00CD65CF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D697240926BC00CD65CF /* GameScene.swift */; };
+		8053D6D1240926BE00CD65CF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D697240926BC00CD65CF /* GameScene.swift */; };
+		8053D6D2240926BE00CD65CF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D697240926BC00CD65CF /* GameScene.swift */; };
+		8053D6D3240926BE00CD65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8053D698240926BE00CD65CF /* Assets.xcassets */; };
+		8053D6D4240926BE00CD65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8053D698240926BE00CD65CF /* Assets.xcassets */; };
+		8053D6D5240926BE00CD65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8053D698240926BE00CD65CF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8053D695240926BC00CD65CF /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		8053D696240926BC00CD65CF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		8053D697240926BC00CD65CF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8053D698240926BE00CD65CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8053D69D240926BE00CD65CF /* Raytracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raytracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8053D6A0240926BE00CD65CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8053D6A2240926BE00CD65CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8053D6A5240926BE00CD65CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8053D6A8240926BE00CD65CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8053D6AA240926BE00CD65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8053D6AF240926BE00CD65CF /* Raytracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raytracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8053D6B1240926BE00CD65CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8053D6B3240926BE00CD65CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8053D6B6240926BE00CD65CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8053D6B9240926BE00CD65CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8053D6BB240926BE00CD65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8053D6C0240926BE00CD65CF /* Raytracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raytracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8053D6C2240926BE00CD65CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8053D6C4240926BE00CD65CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8053D6C7240926BE00CD65CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8053D6C9240926BE00CD65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8053D69A240926BE00CD65CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8053D6AC240926BE00CD65CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8053D6BD240926BE00CD65CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8053D68F240926BB00CD65CF = {
+			isa = PBXGroup;
+			children = (
+				8053D694240926BC00CD65CF /* Raytracer Shared */,
+				8053D69F240926BE00CD65CF /* Raytracer iOS */,
+				8053D6B0240926BE00CD65CF /* Raytracer tvOS */,
+				8053D6C1240926BE00CD65CF /* Raytracer macOS */,
+				8053D69E240926BE00CD65CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8053D694240926BC00CD65CF /* Raytracer Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8053D695240926BC00CD65CF /* Actions.sks */,
+				8053D696240926BC00CD65CF /* GameScene.sks */,
+				8053D697240926BC00CD65CF /* GameScene.swift */,
+				8053D698240926BE00CD65CF /* Assets.xcassets */,
+			);
+			path = "Raytracer Shared";
+			sourceTree = "<group>";
+		};
+		8053D69E240926BE00CD65CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8053D69D240926BE00CD65CF /* Raytracer.app */,
+				8053D6AF240926BE00CD65CF /* Raytracer.app */,
+				8053D6C0240926BE00CD65CF /* Raytracer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8053D69F240926BE00CD65CF /* Raytracer iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8053D6A0240926BE00CD65CF /* AppDelegate.swift */,
+				8053D6A2240926BE00CD65CF /* GameViewController.swift */,
+				8053D6A4240926BE00CD65CF /* Main.storyboard */,
+				8053D6A7240926BE00CD65CF /* LaunchScreen.storyboard */,
+				8053D6AA240926BE00CD65CF /* Info.plist */,
+			);
+			path = "Raytracer iOS";
+			sourceTree = "<group>";
+		};
+		8053D6B0240926BE00CD65CF /* Raytracer tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8053D6B1240926BE00CD65CF /* AppDelegate.swift */,
+				8053D6B3240926BE00CD65CF /* GameViewController.swift */,
+				8053D6B5240926BE00CD65CF /* Main.storyboard */,
+				8053D6B8240926BE00CD65CF /* LaunchScreen.storyboard */,
+				8053D6BB240926BE00CD65CF /* Info.plist */,
+			);
+			path = "Raytracer tvOS";
+			sourceTree = "<group>";
+		};
+		8053D6C1240926BE00CD65CF /* Raytracer macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8053D6C2240926BE00CD65CF /* AppDelegate.swift */,
+				8053D6C4240926BE00CD65CF /* GameViewController.swift */,
+				8053D6C6240926BE00CD65CF /* Main.storyboard */,
+				8053D6C9240926BE00CD65CF /* Info.plist */,
+			);
+			path = "Raytracer macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8053D69C240926BE00CD65CF /* Raytracer iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8053D6D8240926BE00CD65CF /* Build configuration list for PBXNativeTarget "Raytracer iOS" */;
+			buildPhases = (
+				8053D699240926BE00CD65CF /* Sources */,
+				8053D69A240926BE00CD65CF /* Frameworks */,
+				8053D69B240926BE00CD65CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Raytracer iOS";
+			productName = "Raytracer iOS";
+			productReference = 8053D69D240926BE00CD65CF /* Raytracer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8053D6AE240926BE00CD65CF /* Raytracer tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8053D6DB240926BE00CD65CF /* Build configuration list for PBXNativeTarget "Raytracer tvOS" */;
+			buildPhases = (
+				8053D6AB240926BE00CD65CF /* Sources */,
+				8053D6AC240926BE00CD65CF /* Frameworks */,
+				8053D6AD240926BE00CD65CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Raytracer tvOS";
+			productName = "Raytracer tvOS";
+			productReference = 8053D6AF240926BE00CD65CF /* Raytracer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8053D6BF240926BE00CD65CF /* Raytracer macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8053D6DE240926BE00CD65CF /* Build configuration list for PBXNativeTarget "Raytracer macOS" */;
+			buildPhases = (
+				8053D6BC240926BE00CD65CF /* Sources */,
+				8053D6BD240926BE00CD65CF /* Frameworks */,
+				8053D6BE240926BE00CD65CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Raytracer macOS";
+			productName = "Raytracer macOS";
+			productReference = 8053D6C0240926BE00CD65CF /* Raytracer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8053D690240926BB00CD65CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Brad Feehan";
+				TargetAttributes = {
+					8053D69C240926BE00CD65CF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					8053D6AE240926BE00CD65CF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					8053D6BF240926BE00CD65CF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 8053D693240926BB00CD65CF /* Build configuration list for PBXProject "Raytracer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8053D68F240926BB00CD65CF;
+			productRefGroup = 8053D69E240926BE00CD65CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8053D69C240926BE00CD65CF /* Raytracer iOS */,
+				8053D6AE240926BE00CD65CF /* Raytracer tvOS */,
+				8053D6BF240926BE00CD65CF /* Raytracer macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8053D69B240926BE00CD65CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8053D6CD240926BE00CD65CF /* GameScene.sks in Resources */,
+				8053D6A6240926BE00CD65CF /* Main.storyboard in Resources */,
+				8053D6CA240926BE00CD65CF /* Actions.sks in Resources */,
+				8053D6A9240926BE00CD65CF /* LaunchScreen.storyboard in Resources */,
+				8053D6D3240926BE00CD65CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8053D6AD240926BE00CD65CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8053D6CE240926BE00CD65CF /* GameScene.sks in Resources */,
+				8053D6B7240926BE00CD65CF /* Main.storyboard in Resources */,
+				8053D6CB240926BE00CD65CF /* Actions.sks in Resources */,
+				8053D6BA240926BE00CD65CF /* LaunchScreen.storyboard in Resources */,
+				8053D6D4240926BE00CD65CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8053D6BE240926BE00CD65CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8053D6C8240926BE00CD65CF /* Main.storyboard in Resources */,
+				8053D6CF240926BE00CD65CF /* GameScene.sks in Resources */,
+				8053D6D5240926BE00CD65CF /* Assets.xcassets in Resources */,
+				8053D6CC240926BE00CD65CF /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8053D699240926BE00CD65CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8053D6D0240926BE00CD65CF /* GameScene.swift in Sources */,
+				8053D6A3240926BE00CD65CF /* GameViewController.swift in Sources */,
+				8053D6A1240926BE00CD65CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8053D6AB240926BE00CD65CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8053D6D1240926BE00CD65CF /* GameScene.swift in Sources */,
+				8053D6B4240926BE00CD65CF /* GameViewController.swift in Sources */,
+				8053D6B2240926BE00CD65CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8053D6BC240926BE00CD65CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8053D6D2240926BE00CD65CF /* GameScene.swift in Sources */,
+				8053D6C5240926BE00CD65CF /* GameViewController.swift in Sources */,
+				8053D6C3240926BE00CD65CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8053D6A4240926BE00CD65CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8053D6A5240926BE00CD65CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8053D6A7240926BE00CD65CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8053D6A8240926BE00CD65CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8053D6B5240926BE00CD65CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8053D6B6240926BE00CD65CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8053D6B8240926BE00CD65CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8053D6B9240926BE00CD65CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8053D6C6240926BE00CD65CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8053D6C7240926BE00CD65CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8053D6D6240926BE00CD65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8053D6D7240926BE00CD65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8053D6D9240926BE00CD65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Raytracer iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Raytracer;
+				PRODUCT_NAME = Raytracer;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8053D6DA240926BE00CD65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Raytracer iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Raytracer;
+				PRODUCT_NAME = Raytracer;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8053D6DC240926BE00CD65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Raytracer tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Raytracer;
+				PRODUCT_NAME = Raytracer;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		8053D6DD240926BE00CD65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Raytracer tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Raytracer;
+				PRODUCT_NAME = Raytracer;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8053D6DF240926BE00CD65CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Raytracer macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Raytracer;
+				PRODUCT_NAME = Raytracer;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8053D6E0240926BE00CD65CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Raytracer macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Raytracer;
+				PRODUCT_NAME = Raytracer;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8053D693240926BB00CD65CF /* Build configuration list for PBXProject "Raytracer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8053D6D6240926BE00CD65CF /* Debug */,
+				8053D6D7240926BE00CD65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8053D6D8240926BE00CD65CF /* Build configuration list for PBXNativeTarget "Raytracer iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8053D6D9240926BE00CD65CF /* Debug */,
+				8053D6DA240926BE00CD65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8053D6DB240926BE00CD65CF /* Build configuration list for PBXNativeTarget "Raytracer tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8053D6DC240926BE00CD65CF /* Debug */,
+				8053D6DD240926BE00CD65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8053D6DE240926BE00CD65CF /* Build configuration list for PBXNativeTarget "Raytracer macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8053D6DF240926BE00CD65CF /* Debug */,
+				8053D6E0240926BE00CD65CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8053D690240926BB00CD65CF /* Project object */;
+}
