@@ -30,6 +30,24 @@
 		8053D6D3240926BE00CD65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8053D698240926BE00CD65CF /* Assets.xcassets */; };
 		8053D6D4240926BE00CD65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8053D698240926BE00CD65CF /* Assets.xcassets */; };
 		8053D6D5240926BE00CD65CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8053D698240926BE00CD65CF /* Assets.xcassets */; };
+		8053D6E2240A3C9400CD65CF /* Raytracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E1240A3C9400CD65CF /* Raytracer.swift */; };
+		8053D6E3240A3C9400CD65CF /* Raytracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E1240A3C9400CD65CF /* Raytracer.swift */; };
+		8053D6E4240A3C9400CD65CF /* Raytracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E1240A3C9400CD65CF /* Raytracer.swift */; };
+		8053D6E6240A54F800CD65CF /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E5240A54F800CD65CF /* Buffer.swift */; };
+		8053D6E7240A54F800CD65CF /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E5240A54F800CD65CF /* Buffer.swift */; };
+		8053D6E8240A54F800CD65CF /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E5240A54F800CD65CF /* Buffer.swift */; };
+		8053D6EA240A621100CD65CF /* Hitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E9240A621100CD65CF /* Hitable.swift */; };
+		8053D6EB240A621100CD65CF /* Hitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E9240A621100CD65CF /* Hitable.swift */; };
+		8053D6EC240A621100CD65CF /* Hitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6E9240A621100CD65CF /* Hitable.swift */; };
+		8053D6EE240A626400CD65CF /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6ED240A626400CD65CF /* Point.swift */; };
+		8053D6EF240A626400CD65CF /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6ED240A626400CD65CF /* Point.swift */; };
+		8053D6F0240A626400CD65CF /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6ED240A626400CD65CF /* Point.swift */; };
+		8053D6F2240A628B00CD65CF /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F1240A628B00CD65CF /* Direction.swift */; };
+		8053D6F3240A628B00CD65CF /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F1240A628B00CD65CF /* Direction.swift */; };
+		8053D6F4240A628B00CD65CF /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F1240A628B00CD65CF /* Direction.swift */; };
+		8053D6F6240A74BE00CD65CF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F5240A74BE00CD65CF /* Scene.swift */; };
+		8053D6F7240A74BE00CD65CF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F5240A74BE00CD65CF /* Scene.swift */; };
+		8053D6F8240A74BE00CD65CF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F5240A74BE00CD65CF /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +72,12 @@
 		8053D6C4240926BE00CD65CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8053D6C7240926BE00CD65CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8053D6C9240926BE00CD65CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8053D6E1240A3C9400CD65CF /* Raytracer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raytracer.swift; sourceTree = "<group>"; };
+		8053D6E5240A54F800CD65CF /* Buffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buffer.swift; sourceTree = "<group>"; };
+		8053D6E9240A621100CD65CF /* Hitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hitable.swift; sourceTree = "<group>"; };
+		8053D6ED240A626400CD65CF /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		8053D6F1240A628B00CD65CF /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		8053D6F5240A74BE00CD65CF /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +123,12 @@
 				8053D696240926BC00CD65CF /* GameScene.sks */,
 				8053D697240926BC00CD65CF /* GameScene.swift */,
 				8053D698240926BE00CD65CF /* Assets.xcassets */,
+				8053D6E5240A54F800CD65CF /* Buffer.swift */,
+				8053D6E1240A3C9400CD65CF /* Raytracer.swift */,
+				8053D6E9240A621100CD65CF /* Hitable.swift */,
+				8053D6ED240A626400CD65CF /* Point.swift */,
+				8053D6F1240A628B00CD65CF /* Direction.swift */,
+				8053D6F5240A74BE00CD65CF /* Scene.swift */,
 			);
 			path = "Raytracer Shared";
 			sourceTree = "<group>";
@@ -289,6 +319,12 @@
 				8053D6D0240926BE00CD65CF /* GameScene.swift in Sources */,
 				8053D6A3240926BE00CD65CF /* GameViewController.swift in Sources */,
 				8053D6A1240926BE00CD65CF /* AppDelegate.swift in Sources */,
+				8053D6F2240A628B00CD65CF /* Direction.swift in Sources */,
+				8053D6EA240A621100CD65CF /* Hitable.swift in Sources */,
+				8053D6EE240A626400CD65CF /* Point.swift in Sources */,
+				8053D6E6240A54F800CD65CF /* Buffer.swift in Sources */,
+				8053D6E2240A3C9400CD65CF /* Raytracer.swift in Sources */,
+				8053D6F6240A74BE00CD65CF /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +335,12 @@
 				8053D6D1240926BE00CD65CF /* GameScene.swift in Sources */,
 				8053D6B4240926BE00CD65CF /* GameViewController.swift in Sources */,
 				8053D6B2240926BE00CD65CF /* AppDelegate.swift in Sources */,
+				8053D6F3240A628B00CD65CF /* Direction.swift in Sources */,
+				8053D6EB240A621100CD65CF /* Hitable.swift in Sources */,
+				8053D6EF240A626400CD65CF /* Point.swift in Sources */,
+				8053D6E7240A54F800CD65CF /* Buffer.swift in Sources */,
+				8053D6E3240A3C9400CD65CF /* Raytracer.swift in Sources */,
+				8053D6F7240A74BE00CD65CF /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +351,12 @@
 				8053D6D2240926BE00CD65CF /* GameScene.swift in Sources */,
 				8053D6C5240926BE00CD65CF /* GameViewController.swift in Sources */,
 				8053D6C3240926BE00CD65CF /* AppDelegate.swift in Sources */,
+				8053D6F4240A628B00CD65CF /* Direction.swift in Sources */,
+				8053D6EC240A621100CD65CF /* Hitable.swift in Sources */,
+				8053D6F0240A626400CD65CF /* Point.swift in Sources */,
+				8053D6E8240A54F800CD65CF /* Buffer.swift in Sources */,
+				8053D6E4240A3C9400CD65CF /* Raytracer.swift in Sources */,
+				8053D6F8240A74BE00CD65CF /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
