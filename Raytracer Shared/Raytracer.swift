@@ -52,8 +52,10 @@ class Raytracer {
     }
 
     private func color(of ray: Camera.Ray) -> Color {
-        if let hit = Self.scene.hit(by: ray, within: 0.0..<Float.greatestFiniteMagnitude) {
-            return Color(0.5 * (hit.normal + 1))
+
+        if let hit = Self.scene.hit(by: ray, within: 0.001..<Float.greatestFiniteMagnitude) {
+            let target: Direction = hit.point + hit.normal + Direction.randomInUnitSphere()
+            return 0.5 * color(of: Camera.Ray(origin: hit.point, direction: target - hit.point))
         }
 
         let unitDirection = ray.direction.unit
