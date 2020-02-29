@@ -15,6 +15,7 @@ class Raytracer {
 
     private var camera: Camera
     public var buffer: Buffer
+    private let scene: Scene
 
     typealias Scene = [Hitable]
     private static let scene: Scene = [
@@ -28,14 +29,17 @@ class Raytracer {
 
     init(size: CGSize) {
         self.buffer = Buffer(size: size)
-        self.camera = Camera(size: self.buffer.size, location: Point(0, 0, 1), zoom: 0.7)
+        self.camera = Camera(location: Point(15, 2, 4), lookingAt: Point(0, 0, 0), fieldOfView: 20, aspectRatio: Float(size.width / size.height))
+
+//        self.scene = Self.scene
+        self.scene = Scene.random()
     }
 
     func run() {
-        for rowIndex in 0..<buffer.size.height {
+        for rowIndex in 0..<self.buffer.size.height {
             let y = rowIndex
 
-            for columnIndex in 0..<buffer.size.width {
+            for columnIndex in 0..<self.buffer.size.width {
                 let x = columnIndex
 
                 let samples = (0..<Self.SAMPLES).map { sampleIndex -> Color in
@@ -55,7 +59,7 @@ class Raytracer {
     }
 
     private func color(of ray: Camera.Ray, reflections: UInt = 0) -> Color {
-        if let hit = Self.scene.hit(by: ray, within: 0.001..<Float.greatestFiniteMagnitude) {
+        if let hit = self.scene.hit(by: ray, within: 0.001..<Float.greatestFiniteMagnitude) {
             if reflections < Self.MAX_REFLECTIONS {
                 if let reflection = hit.material.scatter(ray, hit: hit) {
                     return reflection.attenuation * color(of: reflection.ray, reflections: reflections + 1)
@@ -83,3 +87,50 @@ extension Raytracer.Color {
     }
 }
 
+extension Raytracer.Scene {
+    static func random() -> Self {
+        var list: [Hitable] = []
+
+        list.append(Sphere(center: Point(0, -1000, 0), radius: 1000, material: Lambertian(albedo: Raytracer.Color(0.5, 0.5, 0.5))))
+
+        for a in -11..<11 {
+            for b in -11..<11 {
+                let material = drand48()
+                let center = Point(Float(a) + 0.9 * Float(drand48()), 0.2, Float(b) + 0.9 * Float(drand48()))
+
+                if (center - Point(4, 0.2, 0)).length > 0.9 {
+                    if material < 0.8 {
+                        list.append(
+                            Sphere(
+                                center: center,
+                                radius: 0.2,
+                                material: Lambertian(
+                                    albedo: Raytracer.Color(Float(drand48() * drand48()), Float(drand48() * drand48()), Float(drand48() * drand48()))
+                                )
+                            )
+                        )
+                    } else if material < 0.95 {
+                        list.append(
+                            Sphere(
+                                center: center,
+                                radius: 0.2,
+                                material: Metal(
+                                    albedo: Raytracer.Color(0.5 * Float(1 + drand48()), 0.5 * Float(1 + drand48()), 0.5 * Float(1 + drand48())),
+                                    fuzziness: 0.5 * Float(drand48())
+                                )
+                            )
+                        )
+                    } else {
+                        break
+                    }
+                }
+            }
+        }
+
+        list.append(Sphere(center: Point(0, 1, 0), radius: 1, material: Lambertian(albedo: Raytracer.Color(0, 0, 0))))
+        list.append(Sphere(center: Point(-4, 1, 0), radius: 1, material: Lambertian(albedo: Raytracer.Color(0.4, 0.2, 0.1))))
+        list.append(Sphere(center: Point(4, 1, 0), radius: 1, material: Metal(albedo: Raytracer.Color(0.7, 0.6, 0.5), fuzziness: 0.0)))
+
+        return Self(list)
+    }
+}

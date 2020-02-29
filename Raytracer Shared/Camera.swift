@@ -6,9 +6,13 @@
 //  Copyright © 2020 Brad Feehan. All rights reserved.
 //
 
+import Foundation
+import simd
+
 struct Camera {
     private static let ORIGIN = Point(0, 0, 0)
     private static let ZOOM: Float = 0.3
+    private static let UP = Direction(0, 1, 0)
 
     private let horizontal: Direction
     private let vertical: Direction
@@ -16,19 +20,28 @@ struct Camera {
     private let lowerLeftCorner: Point
     private let location: Point
 
-    init(size: Buffer.Size, location: Point = Self.ORIGIN, zoom: Float = Self.ZOOM) {
+    init(location: Point, lookingAt: Point, upVector: Direction = Self.UP, fieldOfView: Float = 90, aspectRatio: Float) {
+        let theta = fieldOfView * Float.pi / 180
+        let halfHeight = tan(theta / 2)
+        let halfWidth = aspectRatio * halfHeight
+
         self.location = location
 
-        let width = Float(size.width)
-        let height = Float(size.height)
+        let w = Direction(location - lookingAt).unit
+        let u = Direction(cross(upVector, w)).unit
+        let v = Direction(cross(w, u))
 
-        self.horizontal = Direction(width / height / zoom, 0, 0)
-        self.vertical = Direction(0, 1.0 / zoom, 0)
-        self.lowerLeftCorner = Point(self.horizontal.x, self.vertical.y, 2) * -0.5
+        self.lowerLeftCorner = location - halfWidth * u - halfHeight * v - w
+        self.horizontal = 2 * halfWidth * u
+        self.vertical = 2 * halfHeight * v
     }
 
     func ray(_ u: Float, _ v: Float) -> Ray {
-        return Ray(origin: self.location, direction: self.lowerLeftCorner + u * self.horizontal + v * self.vertical)
+        let horizontal: Direction = u * self.horizontal
+        let vertical: Direction = v * self.vertical
+        let offset: Direction = self.lowerLeftCorner - self.location
+        let direction: Direction = offset + horizontal + vertical
+        return Ray(origin: self.location, direction: direction)
     }
 
     struct Ray {
