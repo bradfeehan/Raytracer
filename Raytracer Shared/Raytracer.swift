@@ -11,14 +11,17 @@ import simd
 
 class Raytracer {
     private static let SAMPLES = 100
+    private static let MAX_REFLECTIONS = 50
 
     private var camera: Camera
     public var buffer: Buffer
 
     typealias Scene = [Hitable]
     private static let scene: Scene = [
-        Sphere(center: Point(0, 0, -1), radius: 0.5),
-        Sphere(center: Point(0, -100.5, -1), radius: 100),
+        Sphere(center: Point(0, 0, -1), radius: 0.5, material: Lambertian(albedo: Color(0.8, 0.3, 0.3))),
+        Sphere(center: Point(0, -100.5, -1), radius: 100, material: Lambertian(albedo: Color(0.8, 0.8, 0))),
+        Sphere(center: Point(1, 0, -1), radius: 0.5, material: Metal(albedo: Color(0.8, 0.6, 0.2), fuzziness: 1)),
+        Sphere(center: Point(-1, 0, -1), radius: 0.5, material: Metal(albedo: Color(0.8, 0.8, 0.8), fuzziness: 0.3)),
     ]
 
     typealias Color = SIMD3<Float>
@@ -51,11 +54,15 @@ class Raytracer {
         return Float(drand48())
     }
 
-    private func color(of ray: Camera.Ray) -> Color {
-
+    private func color(of ray: Camera.Ray, reflections: UInt = 0) -> Color {
         if let hit = Self.scene.hit(by: ray, within: 0.001..<Float.greatestFiniteMagnitude) {
-            let target: Direction = hit.point + hit.normal + Direction.randomInUnitSphere()
-            return 0.5 * color(of: Camera.Ray(origin: hit.point, direction: target - hit.point))
+            if reflections < Self.MAX_REFLECTIONS {
+                if let reflection = hit.material.scatter(ray, hit: hit) {
+                    return reflection.attenuation * color(of: reflection.ray, reflections: reflections + 1)
+                }
+            }
+
+            return Color.black
         }
 
         let unitDirection = ray.direction.unit

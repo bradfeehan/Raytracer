@@ -51,6 +51,9 @@
 		8053D6FA240A7C3D00CD65CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F9240A7C3D00CD65CF /* Camera.swift */; };
 		8053D6FB240A7C3D00CD65CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F9240A7C3D00CD65CF /* Camera.swift */; };
 		8053D6FC240A7C3D00CD65CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F9240A7C3D00CD65CF /* Camera.swift */; };
+		8053D6FE240A8F6100CD65CF /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6FD240A8F6100CD65CF /* Material.swift */; };
+		8053D6FF240A8F6100CD65CF /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6FD240A8F6100CD65CF /* Material.swift */; };
+		8053D700240A8F6100CD65CF /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6FD240A8F6100CD65CF /* Material.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,7 @@
 		8053D6F1240A628B00CD65CF /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		8053D6F5240A74BE00CD65CF /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		8053D6F9240A7C3D00CD65CF /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		8053D6FD240A8F6100CD65CF /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 				8053D6F1240A628B00CD65CF /* Direction.swift */,
 				8053D6F5240A74BE00CD65CF /* Scene.swift */,
 				8053D6F9240A7C3D00CD65CF /* Camera.swift */,
+				8053D6FD240A8F6100CD65CF /* Material.swift */,
 			);
 			path = "Raytracer Shared";
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				8053D6EE240A626400CD65CF /* Point.swift in Sources */,
 				8053D6FA240A7C3D00CD65CF /* Camera.swift in Sources */,
 				8053D6E6240A54F800CD65CF /* Buffer.swift in Sources */,
+				8053D6FE240A8F6100CD65CF /* Material.swift in Sources */,
 				8053D6E2240A3C9400CD65CF /* Raytracer.swift in Sources */,
 				8053D6F6240A74BE00CD65CF /* Scene.swift in Sources */,
 			);
@@ -346,6 +352,7 @@
 				8053D6EF240A626400CD65CF /* Point.swift in Sources */,
 				8053D6FB240A7C3D00CD65CF /* Camera.swift in Sources */,
 				8053D6E7240A54F800CD65CF /* Buffer.swift in Sources */,
+				8053D6FF240A8F6100CD65CF /* Material.swift in Sources */,
 				8053D6E3240A3C9400CD65CF /* Raytracer.swift in Sources */,
 				8053D6F7240A74BE00CD65CF /* Scene.swift in Sources */,
 			);
@@ -363,6 +370,7 @@
 				8053D6F0240A626400CD65CF /* Point.swift in Sources */,
 				8053D6FC240A7C3D00CD65CF /* Camera.swift in Sources */,
 				8053D6E8240A54F800CD65CF /* Buffer.swift in Sources */,
+				8053D700240A8F6100CD65CF /* Material.swift in Sources */,
 				8053D6E4240A3C9400CD65CF /* Raytracer.swift in Sources */,
 				8053D6F8240A74BE00CD65CF /* Scene.swift in Sources */,
 			);

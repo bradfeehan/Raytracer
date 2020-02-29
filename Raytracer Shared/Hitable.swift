@@ -9,7 +9,10 @@
 import simd
 
 struct Hit {
-    let distance: Float, point: Point, normal: Direction
+    let distance: Float
+    let point: Point
+    let normal: Direction
+    let material: Material
 }
 
 protocol Hitable {
@@ -18,6 +21,7 @@ protocol Hitable {
 
 struct Sphere: Hitable {
     let center: Point, radius: Float
+    let material: Material
 
     func hit(by ray: Camera.Ray, within range: Range<Float>) -> Hit? {
         let originToCenter = ray.origin - self.center
@@ -32,16 +36,25 @@ struct Sphere: Hitable {
 
         if range.contains(t1) {
             let point = ray.point(atParameter: t1)
-            return Hit(distance: t1, point: point, normal: (point - center).unit)
+            return hit(at: point, distance: t1)
         }
 
         let t2 = (-b + discriminant.squareRoot()) / (2 * a)
 
         if range.contains(t2) {
             let point = ray.point(atParameter: t2)
-            return Hit(distance: t2, point: point, normal: (point - center).unit)
+            return hit(at: point, distance: t2)
         }
 
         return nil
+    }
+
+    private func hit(at point: Point, distance: Float) -> Hit {
+        return Hit(
+            distance: distance,
+            point: point,
+            normal: (point - self.center).unit,
+            material: self.material
+        )
     }
 }
