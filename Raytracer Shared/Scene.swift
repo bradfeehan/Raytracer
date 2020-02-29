@@ -9,7 +9,7 @@
 typealias Scene = [Hitable]
 
 extension Scene: Hitable {
-    func hit(by ray: Raytracer.Ray, within range: Range<Float>) -> Hit? {
+    func hit(by ray: Camera.Ray, within range: Range<Float>) -> Hit? {
         var closest = range.upperBound
         var maybeHit: Hit?
 

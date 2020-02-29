@@ -13,13 +13,13 @@ struct Hit {
 }
 
 protocol Hitable {
-    func hit(by ray: Raytracer.Ray, within range: Range<Float>) -> Hit?
+    func hit(by ray: Camera.Ray, within range: Range<Float>) -> Hit?
 }
 
 struct Sphere: Hitable {
     let center: Point, radius: Float
 
-    func hit(by ray: Raytracer.Ray, within range: Range<Float>) -> Hit? {
+    func hit(by ray: Camera.Ray, within range: Range<Float>) -> Hit? {
         let originToCenter = ray.origin - self.center
         let a = dot(ray.direction, ray.direction)
         let b = 2 * dot(originToCenter, ray.direction)

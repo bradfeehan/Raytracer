@@ -9,7 +9,3 @@
 import simd
 
 typealias Point = SIMD3<Float>
-
-extension Point {
-    static let origin = Self(0, 0, 0)
-}

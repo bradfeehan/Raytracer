@@ -48,6 +48,9 @@
 		8053D6F6240A74BE00CD65CF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F5240A74BE00CD65CF /* Scene.swift */; };
 		8053D6F7240A74BE00CD65CF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F5240A74BE00CD65CF /* Scene.swift */; };
 		8053D6F8240A74BE00CD65CF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F5240A74BE00CD65CF /* Scene.swift */; };
+		8053D6FA240A7C3D00CD65CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F9240A7C3D00CD65CF /* Camera.swift */; };
+		8053D6FB240A7C3D00CD65CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F9240A7C3D00CD65CF /* Camera.swift */; };
+		8053D6FC240A7C3D00CD65CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053D6F9240A7C3D00CD65CF /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,7 @@
 		8053D6ED240A626400CD65CF /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		8053D6F1240A628B00CD65CF /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		8053D6F5240A74BE00CD65CF /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		8053D6F9240A7C3D00CD65CF /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				8053D6ED240A626400CD65CF /* Point.swift */,
 				8053D6F1240A628B00CD65CF /* Direction.swift */,
 				8053D6F5240A74BE00CD65CF /* Scene.swift */,
+				8053D6F9240A7C3D00CD65CF /* Camera.swift */,
 			);
 			path = "Raytracer Shared";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				8053D6F2240A628B00CD65CF /* Direction.swift in Sources */,
 				8053D6EA240A621100CD65CF /* Hitable.swift in Sources */,
 				8053D6EE240A626400CD65CF /* Point.swift in Sources */,
+				8053D6FA240A7C3D00CD65CF /* Camera.swift in Sources */,
 				8053D6E6240A54F800CD65CF /* Buffer.swift in Sources */,
 				8053D6E2240A3C9400CD65CF /* Raytracer.swift in Sources */,
 				8053D6F6240A74BE00CD65CF /* Scene.swift in Sources */,
@@ -338,6 +344,7 @@
 				8053D6F3240A628B00CD65CF /* Direction.swift in Sources */,
 				8053D6EB240A621100CD65CF /* Hitable.swift in Sources */,
 				8053D6EF240A626400CD65CF /* Point.swift in Sources */,
+				8053D6FB240A7C3D00CD65CF /* Camera.swift in Sources */,
 				8053D6E7240A54F800CD65CF /* Buffer.swift in Sources */,
 				8053D6E3240A3C9400CD65CF /* Raytracer.swift in Sources */,
 				8053D6F7240A74BE00CD65CF /* Scene.swift in Sources */,
@@ -354,6 +361,7 @@
 				8053D6F4240A628B00CD65CF /* Direction.swift in Sources */,
 				8053D6EC240A621100CD65CF /* Hitable.swift in Sources */,
 				8053D6F0240A626400CD65CF /* Point.swift in Sources */,
+				8053D6FC240A7C3D00CD65CF /* Camera.swift in Sources */,
 				8053D6E8240A54F800CD65CF /* Buffer.swift in Sources */,
 				8053D6E4240A3C9400CD65CF /* Raytracer.swift in Sources */,
 				8053D6F8240A74BE00CD65CF /* Scene.swift in Sources */,

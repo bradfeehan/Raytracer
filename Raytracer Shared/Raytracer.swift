@@ -10,8 +10,7 @@ import Foundation
 import simd
 
 class Raytracer {
-    private static let ZOOM: Float = 0.5
-
+    private var camera: Camera
     public var buffer: Buffer
 
     typealias Scene = [Hitable]
@@ -20,18 +19,9 @@ class Raytracer {
         Sphere(center: Point(0, -100.5, -1), radius: 100),
     ]
 
-    private var horizontal, vertical: Direction
-    private var lowerLeftCorner: Point
-
     init(size: CGSize) {
         self.buffer = Buffer(size: size)
-
-        let width = Float(buffer.size.width)
-        let height = Float(buffer.size.height)
-
-        self.horizontal = Direction(width / height / Self.ZOOM, 0, 0)
-        self.vertical = Direction(0, 1.0 / Self.ZOOM, 0)
-        self.lowerLeftCorner = Point(self.horizontal.x, self.vertical.y, 2) * -0.5
+        self.camera = Camera(size: self.buffer.size)
     }
 
     func run() {
@@ -43,16 +33,12 @@ class Raytracer {
                 let x = columnIndex
                 let u = Float(x) / Float(buffer.size.width)
 
-                self.buffer.rows[rowIndex][columnIndex] = self.color(of: self.ray(u, v))
+                self.buffer.rows[rowIndex][columnIndex] = self.color(of: self.camera.ray(u, v))
             }
         }
     }
 
-    private func ray(_ u: Float, _ v: Float) -> Ray {
-        return Ray(origin: Point.origin, direction: self.lowerLeftCorner + u * self.horizontal + v * self.vertical)
-    }
-
-    private func color(of ray: Ray) -> Buffer.Pixel {
+    private func color(of ray: Camera.Ray) -> Buffer.Pixel {
         if let hit = Self.scene.hit(by: ray, within: 0.0..<Float.greatestFiniteMagnitude) {
             let rgb = 0.5 * (hit.normal + 1)
             return Buffer.Pixel(rgb * 0xff)
@@ -61,20 +47,6 @@ class Raytracer {
         let unitDirection = ray.direction.unit
         let t = 0.5 * (unitDirection.y + 1)
         return (1 - t) * Buffer.Pixel.white + t * Buffer.Pixel.sky
-    }
-
-    struct Ray {
-        let origin: Point
-        let direction: Direction
-
-        enum Intersection {
-            case Miss
-            case Hit(point: Point, normal: Direction)
-        }
-
-        func point(atParameter t: Float) -> Point {
-            return origin + t * direction
-        }
     }
 }
 
