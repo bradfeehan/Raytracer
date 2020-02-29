@@ -72,7 +72,7 @@ extension Raytracer.Color {
     static let sky = Self(0.5, 0.7, 1)
 
     var pixel: Buffer.Pixel {
-        return Buffer.Pixel(self * 0xff)
+        return Buffer.Pixel(self.squareRoot() * 0xff)
     }
 }
 
