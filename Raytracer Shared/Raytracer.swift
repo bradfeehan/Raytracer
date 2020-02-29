@@ -25,7 +25,7 @@ class Raytracer {
 
     init(size: CGSize) {
         self.buffer = Buffer(size: size)
-        self.camera = Camera(size: self.buffer.size)
+        self.camera = Camera(size: self.buffer.size, location: Point(0, 0, 1), zoom: 0.7)
     }
 
     func run() {
