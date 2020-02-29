@@ -23,7 +23,7 @@ class Buffer {
     init(size: Buffer.Size) {
         self.size = size
 
-        let emptyRow = Row(repeating: Pixel.red, count: size.width)
+        let emptyRow = Row(repeating: Pixel.blank, count: size.width)
         self.rows = Array<Row>(repeating: emptyRow, count: size.height)
     }
 
@@ -33,10 +33,15 @@ class Buffer {
 }
 
 extension Buffer.Pixel {
-    static let red: Self = 0xff0000ff
-    static let white: Self = 0xffffffff
-    static let blue: Self = 0xffff0000
-    static let sky: Self = 0xffffb480
+    static let blank = Raytracer.Color.red.pixel
+
+    var rgb: SIMD3<Float> {
+        return SIMD3<Float>(
+            x: Float((self & 0xff0000) >> 16),
+            y: Float((self & 0xff00) >> 8),
+            z: Float(self & 0xff)
+        )
+    }
 
     var rgba: SIMD4<Float> {
         return SIMD4<Float>(

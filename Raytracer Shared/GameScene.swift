@@ -35,7 +35,10 @@ class GameScene: SKScene {
         self.screen = screen
 
         self.raytracer = Raytracer(size: screen.size)
-        self.raytracer?.run()
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.raytracer?.run()
+        }
     }
 
     #if os(watchOS)
