@@ -17,7 +17,7 @@ class Raytracer {
     public var buffer: Buffer
     private let scene: Scene
 
-    typealias Scene = [Hitable]
+//    typealias Scene = [Hitable]
     private static let scene: Scene = [
         Sphere(center: Point(0, 0, -1), radius: 0.5, material: Lambertian(albedo: Color(0.8, 0.3, 0.3))),
         Sphere(center: Point(0, -100.5, -1), radius: 100, material: Lambertian(albedo: Color(0.8, 0.8, 0))),
@@ -29,9 +29,19 @@ class Raytracer {
 
     init(size: CGSize) {
         self.buffer = Buffer(size: size)
-        self.camera = Camera(location: Point(15, 2, 4), lookingAt: Point(0, 0, 0), fieldOfView: 20, aspectRatio: Float(size.width / size.height))
 
-//        self.scene = Self.scene
+        let location = Point(15, 2, 4)
+        let lookingAt = Point(0, 0, 0)
+
+        self.camera = Camera(
+            location: location,
+            lookingAt: lookingAt,
+            aspectRatio: Float(size.width / size.height),
+            fieldOfView: 20,
+            aperture: 2,
+            focusDistance: (location - lookingAt).length
+        )
+
         self.scene = Scene.random()
     }
 
@@ -42,14 +52,16 @@ class Raytracer {
             for columnIndex in 0..<self.buffer.size.width {
                 let x = columnIndex
 
-                let samples = (0..<Self.SAMPLES).map { sampleIndex -> Color in
-                    let u = (Float(x) + randomFloat()) / Float(self.buffer.size.width)
-                    let v = (Float(y) + randomFloat()) / Float(self.buffer.size.height)
+                DispatchQueue.global(qos: .utility).async {
+                    let samples = (0..<Self.SAMPLES).map { sampleIndex -> Color in
+                        let u = (Float(x) + self.randomFloat()) / Float(self.buffer.size.width)
+                        let v = (Float(y) + self.randomFloat()) / Float(self.buffer.size.height)
 
-                    return self.color(of: self.camera.ray(u, v))
+                        return self.color(of: self.camera.ray(u, v))
+                    }
+
+                    self.buffer.rows[rowIndex][columnIndex] = (samples.reduce(Color.black, +) / Float(samples.count)).pixel
                 }
-
-                self.buffer.rows[rowIndex][columnIndex] = (samples.reduce(Color.black, +) / Float(samples.count)).pixel
             }
         }
     }
@@ -84,53 +96,5 @@ extension Raytracer.Color {
 
     var pixel: Buffer.Pixel {
         return Buffer.Pixel(self.squareRoot() * 0xff)
-    }
-}
-
-extension Raytracer.Scene {
-    static func random() -> Self {
-        var list: [Hitable] = []
-
-        list.append(Sphere(center: Point(0, -1000, 0), radius: 1000, material: Lambertian(albedo: Raytracer.Color(0.5, 0.5, 0.5))))
-
-        for a in -11..<11 {
-            for b in -11..<11 {
-                let material = drand48()
-                let center = Point(Float(a) + 0.9 * Float(drand48()), 0.2, Float(b) + 0.9 * Float(drand48()))
-
-                if (center - Point(4, 0.2, 0)).length > 0.9 {
-                    if material < 0.8 {
-                        list.append(
-                            Sphere(
-                                center: center,
-                                radius: 0.2,
-                                material: Lambertian(
-                                    albedo: Raytracer.Color(Float(drand48() * drand48()), Float(drand48() * drand48()), Float(drand48() * drand48()))
-                                )
-                            )
-                        )
-                    } else if material < 0.95 {
-                        list.append(
-                            Sphere(
-                                center: center,
-                                radius: 0.2,
-                                material: Metal(
-                                    albedo: Raytracer.Color(0.5 * Float(1 + drand48()), 0.5 * Float(1 + drand48()), 0.5 * Float(1 + drand48())),
-                                    fuzziness: 0.5 * Float(drand48())
-                                )
-                            )
-                        )
-                    } else {
-                        break
-                    }
-                }
-            }
-        }
-
-        list.append(Sphere(center: Point(0, 1, 0), radius: 1, material: Lambertian(albedo: Raytracer.Color(0, 0, 0))))
-        list.append(Sphere(center: Point(-4, 1, 0), radius: 1, material: Lambertian(albedo: Raytracer.Color(0.4, 0.2, 0.1))))
-        list.append(Sphere(center: Point(4, 1, 0), radius: 1, material: Metal(albedo: Raytracer.Color(0.7, 0.6, 0.5), fuzziness: 0.0)))
-
-        return Self(list)
     }
 }
